@@ -163,7 +163,9 @@ class McpToolset(BaseToolset):
     # Set GOOGLE_API_PREVENT_AGENT_TOKEN_SHARING_FOR_GCP_SERVICES to false
     # to disable bound token sharing. Tracking on
     # https://github.com/google/adk-python/issues/5361
-    os.environ['GOOGLE_API_PREVENT_AGENT_TOKEN_SHARING_FOR_GCP_SERVICES'] = 'false'
+    os.environ["GOOGLE_API_PREVENT_AGENT_TOKEN_SHARING_FOR_GCP_SERVICES"] = (
+        "false"
+    )
     # --- END BOUND TOKEN  PATCH ---
 
     super().__init__(tool_filter=tool_filter, tool_name_prefix=tool_name_prefix)
